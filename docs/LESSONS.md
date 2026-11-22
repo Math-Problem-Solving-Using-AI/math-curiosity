@@ -56,3 +56,26 @@ Add an entry whenever something fails or surprises us. Format: what happened, wh
   at a 5s timeout and 205 at a 60s timeout (8 parallel workers). `unsat` (a proof) can be
   trusted, `unknown` carries no information. Rule: accumulate proofs across runs, never
   overwrite, never read a missing proof as evidence of non-implication.
+
+## Access and sources
+
+- **Read `robots.txt` before the first request to a site** (2026-11-22). One request to
+  erdosproblems.com (`curl` of `/5`, output discarded) was sent before reading its `robots.txt`,
+  which disallows Claude agents (`Claude-User`, `ClaudeBot`, ...). A plain `curl` is not
+  blocked by the server, but sending it anyway would be working around the site's wishes.
+  Rule: read `robots.txt` first, and if it disallows the agent, use the owner's saved copy, a
+  database with an open license, or ask the owner. Do not change the user agent to get through.
+- **A saved page can be older than its save date.** The prizes page saved on 2026-11-22 showed
+  data from about 2026-10-16 (dated by comparing fields with a database that records update
+  dates). Rule: date the content, not the file.
+
+## Laws and solvers
+
+- **A law with a variable that appears only on one side, as that whole side, collapses
+  trivially** (`((x*y)*z)*x = w`: put `x = y = z = a` and get `a = b`). z3 returned `unknown`
+  on it at 5 s and it sat on the "open" list until the ETP cross-check showed it. Rule: before
+  calling a law open, check the cheap syntactic cases by hand, and cross-check against any
+  external data that covers part of the family.
+- **Split a stuck bucket by its simplest feature before declaring it hard.** The nine laws with
+  no small model were one bucket. Three of them do not mention `f`, and for those the ETP data
+  plus "try every `f` on a known model" settled 1,417 + 1,256 pairs in seconds.
