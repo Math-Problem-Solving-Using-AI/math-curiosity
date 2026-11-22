@@ -11,10 +11,10 @@ Lean.** Lean acceptance alone is not treated as proof, see [`docs/LEAN_CAVEATS.m
 
 | Repository | Question | State |
 |------------|----------|-------|
-| [eq-unary-magma-laws](https://github.com/Math-Problem-Solving-Using-AI/eq-unary-magma-laws) | Which short laws over one binary and one unary operation imply which? | 712 laws up to size 3. 335,885 non-implications certified, 163,054 implications rest on z3 alone, 7,293 pairs open |
-| [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) | Nine of those laws have no model with 2 or 3 elements. Do they collapse every structure to one element? | 1 collapse (z3-only), 2 with verified size-4 models, 2 finite-versus-general leads, 4 open |
+| [eq-unary-magma-laws](https://github.com/Math-Problem-Solving-Using-AI/eq-unary-magma-laws) | Which short laws over one binary and one unary operation imply which? | 712 laws up to size 3. 335,885 non-implications certified, 163,054 implications rest on z3 alone, 7,293 pairs open in the stored table (1,256 of them settled by the Equational Theories Project data and 608 more by new certificates, 2026-11-22). The part without `f` agrees with the ETP: 0 disagreements |
+| [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) | Nine of those laws have no model with 2 or 3 elements. Do they collapse every structure to one element? | 2 collapse, 2 known laws (central groupoid, Stein's third law) with fully decided rows, 2 candidate Austin laws (hand arguments), 3 open |
 
-Planned, nothing started: problems from erdosproblems.com that carry no prize ([`docs/ERDOS_PLAN.md`](docs/ERDOS_PLAN.md)).
+Erdős problems with no prize: triaged and registered for later attempts, none attempted yet ([`docs/erdos/`](docs/erdos), plan in [`docs/ERDOS_PLAN.md`](docs/ERDOS_PLAN.md)).
 
 ## How this is organised
 

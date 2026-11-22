@@ -56,6 +56,18 @@ implication we mean. See `VERIFICATION_PROTOCOL.md`, statement fidelity step.
 - **UNCONFIRMED:** a search summary said only "13" of the AI system's correct solutions
   addressed the intended problem. We did NOT find that number. Do not cite it.
 - **UNCONFIRMED:** Erdős 918 as a case where a bound was lost in formalization.
+- **Erdős 1055** (PAGE-STATED, read 2026-11-22 with `gh issue view`): formal-conjectures issue
+  #4976, "`IsOfClass` does not exclude lower classes, so `IsOfClass 2 2` holds and `p 2 = 2` instead
+  of 13" (closed 2026-08-16). Verbatim: "At `r = 2` the clause meant to force "equality for at least
+  one prime factor" is vacuous, because `m : ℕ+` and `m ≤ 1` already force `m = 1`." A recursive
+  definition type-checked and looked right, but a quantifier over a one-element range made a clause
+  say nothing. A one-line sanity value (`p 2 = 13`, from OEIS A005113) catches it. The current
+  file contains the fix.
+- **Erdős 887** (PAGE-STATED, formal-conjectures pull request #7218, merged 2026-10-22): the
+  docstring of `rosenfeld_4` described a window with constant C = 1, while the Lean statement lets C
+  vary. Verbatim: "With C = 1, every n has at most one divisor in the window." Here the prose and the
+  formal statement disagreed. The same C = 1 wording appears in the problem's notes as we saved them
+  (about 2026-10-16). Lesson: compare docstring and formula, and test the prose with a small case.
 
 ## C3. Junk values and silent conventions (PAGE-STATED, Lean Zulip thread, May 2025)
 

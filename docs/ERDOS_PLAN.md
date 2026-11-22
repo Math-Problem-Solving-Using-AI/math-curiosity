@@ -1,6 +1,11 @@
 # Plan: problems from erdosproblems.com with no prize
 
-Status: **plan only, nothing started.** The owner wants to take part in problems from
+Status (2026-11-22): **triage done, 10 dossiers written, no problem attempted.** Start with
+[`erdos/REGISTRY.md`](erdos/REGISTRY.md) (queue and procedure), [`erdos/triage-2026-11-22.md`](erdos/triage-2026-11-22.md)
+(how the candidates were chosen), [`erdos/RULES.md`](erdos/RULES.md) and [`erdos/README.md`](erdos/README.md)
+(sources; the site disallows Claude agents, so only the owner saves its pages).
+
+The owner wants to take part in problems from
 [erdosproblems.com](https://www.erdosproblems.com) that carry no prize, one repository each, named
 `erdos-<number>`.
 
