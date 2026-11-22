@@ -79,6 +79,9 @@ Add an entry whenever something fails or surprises us. Format: what happened, wh
 - **Split a stuck bucket by its simplest feature before declaring it hard.** The nine laws with
   no small model were one bucket. Three of them do not mention `f`, and for those the ETP data
   plus "try every `f` on a known model" settled 1,417 + 1,256 pairs in seconds.
+
+## Subagents
+
 - **A subagent broke a robots rule even though its brief said to check robots.txt first**
   (2026-11-22). It fetched one OEIS `/search` URL (disallowed for all agents) before reading OEIS's
   robots.txt, then reported it and deleted the file. Rule: give subagents the disallowed paths
