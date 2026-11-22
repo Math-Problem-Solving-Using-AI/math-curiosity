@@ -35,8 +35,7 @@ Add an entry whenever something fails or surprises us. Format: what happened, wh
 
 - **Search summaries disagreed with the primary pages.** Examples found on 2026-11-22: a summary
   gave a specific CVE number for the Lean kernel bug, the advisory says none was assigned; a
-  summary said only "13" of an AI system's Erdős solutions addressed the intended problem, no
-  page we read says that; a summary said a checker was unaffected, no page mentions it.
+  summary gave a count of AI solutions that no page we read contains; a summary said a checker was unaffected, no page mentions it.
   Rule: summaries are leads. Read the primary page, quote it, label SINGLE-SOURCE or UNCONFIRMED.
 - A PDF fetched as raw bytes may be unreadable, and a "summary" of it may invent content. If the
   body text was not read, say "not read" (see `LEAN_CAVEATS.md`, arXiv 2606.29493).
@@ -59,13 +58,25 @@ Add an entry whenever something fails or surprises us. Format: what happened, wh
 
 ## Access and sources
 
-- **Read `robots.txt` before the first request to a site** (2026-11-22). One request to
-  erdosproblems.com (`curl` of `/5`, output discarded) was sent before reading its `robots.txt`,
-  which disallows Claude agents (`Claude-User`, `ClaudeBot`, ...). A plain `curl` is not
+- **Read `robots.txt` before the first request to a site** (2026-11-22). One request to a problem
+  site (output discarded) was sent before reading its `robots.txt`, which disallows Claude agents
+  (`Claude-User`, `ClaudeBot`, ...). A plain `curl` is not
   blocked by the server, but sending it anyway would be working around the site's wishes.
   Rule: read `robots.txt` first, and if it disallows the agent, use the owner's saved copy, a
   database with an open license, or ask the owner. Do not change the user agent to get through.
-- **A saved page can be older than its save date.** The prizes page saved on 2026-11-22 showed
+- **A triage called problems "untouched" that others had already worked on** (2026-11-22). Its
+  literature searches covered papers, OEIS and a problem database, but not public trackers or GitHub.
+  A later check found other people's work on every candidate in the queue, including published
+  values for the first one. Rule: before planning a computation, search GitHub (`gh search repos`),
+  related Zulip channels, public trackers of the field and pull requests in formal-statement
+  repositories, as well as papers.
+- **robots.txt read and page fetched in one command** (2026-11-22). One shell command printed PyPI's
+  robots.txt and then fetched `/pypi/eqtheory/json`, which that file disallows. I deleted the response
+  unread. Rule: read robots.txt in its own step, and only then decide whether to fetch.
+- **"Nobody else works on X" was said without a check** (2026-11-22). The owner asked "are you sure?",
+  and it had not been checked since the morning's literature search, which had skipped GitHub.
+  Rule: a claim that something is uncrowded needs a dated search behind it, like any other claim.
+- **A saved page can be older than its save date.** A page saved on 2026-11-22 showed
   data from about 2026-10-16 (dated by comparing fields with a database that records update
   dates). Rule: date the content, not the file.
 
@@ -86,7 +97,7 @@ Add an entry whenever something fails or surprises us. Format: what happened, wh
   (2026-11-22). It fetched one OEIS `/search` URL (disallowed for all agents) before reading OEIS's
   robots.txt, then reported it and deleted the file. Rule: give subagents the disallowed paths
   explicitly in the brief (for OEIS: `/search`; arXiv: `/search`, `/api`, and 15 s between requests;
-  erdosproblems.com, ams.org, link.springer.com: everything), not just "check robots.txt".
-- **Subagent triage one-liners need a second look.** For Erdős 887 the cheap-pass subagent proposed a
-  search with constant C = 1, which an elementary argument (and the formal-conjectures file) shows
-  cannot work. Rule: a triage line is a hypothesis until its dossier is written from primary sources.
+  ams.org, link.springer.com: everything), not just "check robots.txt".
+- **Subagent triage one-liners need a second look.** A cheap-pass subagent proposed a search with a
+  constant that an elementary argument shows cannot work. Rule: a triage line is a hypothesis until it
+  is written up from primary sources.

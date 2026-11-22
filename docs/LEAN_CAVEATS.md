@@ -66,8 +66,7 @@ implication we mean. See `VERIFICATION_PROTOCOL.md`, statement fidelity step.
 - **Erdős 887** (PAGE-STATED, formal-conjectures pull request #7218, merged 2026-10-22): the
   docstring of `rosenfeld_4` described a window with constant C = 1, while the Lean statement lets C
   vary. Verbatim: "With C = 1, every n has at most one divisor in the window." Here the prose and the
-  formal statement disagreed. The same C = 1 wording appears in the problem's notes as we saved them
-  (about 2026-10-16). Lesson: compare docstring and formula, and test the prose with a small case.
+  formal statement disagreed. Lesson: compare docstring and formula, and test the prose with a small case.
 
 ## C3. Junk values and silent conventions (PAGE-STATED, Lean Zulip thread, May 2025)
 
