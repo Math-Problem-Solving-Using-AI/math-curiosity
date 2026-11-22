@@ -1,4 +1,4 @@
-> Script names below (`check_laws_text.py`, `check_laws_count.py`, `selftest_verifiers.py`) belong to [eq-unary-magma-laws](https://github.com/MauroBCardoso/eq-unary-magma-laws). Other problems provide their own equivalents.
+> Script names below (`check_laws_text.py`, `check_laws_count.py`, `selftest_verifiers.py`) come from the `eq-unary-magma-laws` repository. Other problems provide their own equivalents.
 
 # Verification protocol
 
