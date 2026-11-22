@@ -3,7 +3,7 @@
 # Usage: tools/sync_shared_docs.sh ../eq-unary-magma-laws ../eq-laws-without-small-models
 set -euo pipefail
 hub="$(cd "$(dirname "$0")/.." && pwd)"
-owner="${OWNER:-OWNER}"
+owner="${OWNER:-Math-Problem-Solving-Using-AI}"
 for dest in "$@"; do
   mkdir -p "$dest/docs/shared"
   for f in VERIFICATION_PROTOCOL LEAN_CAVEATS STEP_TEMPLATE LESSONS; do

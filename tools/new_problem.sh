@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 # Create a new problem repository next to this hub from template/.
-# Usage: OWNER=<github-login> tools/new_problem.sh erdos-123
+# Usage: tools/new_problem.sh erdos-123    (OWNER defaults to the organization, override if needed)
 set -euo pipefail
 name="$1"
 hub="$(cd "$(dirname "$0")/.." && pwd)"
 dest="$hub/../$name"
-owner="${OWNER:?set OWNER to your GitHub login}"
+owner="${OWNER:-Math-Problem-Solving-Using-AI}"
 [ -e "$dest" ] && { echo "already exists: $dest"; exit 1; }
 cp -r "$hub/template" "$dest"
 cp "$hub/LICENSE" "$dest/LICENSE"

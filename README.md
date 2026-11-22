@@ -11,8 +11,8 @@ Lean.** Lean acceptance alone is not treated as proof, see [`docs/LEAN_CAVEATS.m
 
 | Repository | Question | State |
 |------------|----------|-------|
-| [eq-unary-magma-laws](https://github.com/MauroBCardoso/eq-unary-magma-laws) | Which short laws over one binary and one unary operation imply which? | 712 laws up to size 3. 335,885 non-implications certified, 163,054 implications rest on z3 alone, 7,293 pairs open |
-| [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models) | Nine of those laws have no model with 2 or 3 elements. Do they collapse every structure to one element? | 1 collapse (z3-only), 2 with verified size-4 models, 2 finite-versus-general leads, 4 open |
+| [eq-unary-magma-laws](https://github.com/Math-Problem-Solving-Using-AI/eq-unary-magma-laws) | Which short laws over one binary and one unary operation imply which? | 712 laws up to size 3. 335,885 non-implications certified, 163,054 implications rest on z3 alone, 7,293 pairs open |
+| [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) | Nine of those laws have no model with 2 or 3 elements. Do they collapse every structure to one element? | 1 collapse (z3-only), 2 with verified size-4 models, 2 finite-versus-general leads, 4 open |
 
 Planned, nothing started: problems from erdosproblems.com that carry no prize ([`docs/ERDOS_PLAN.md`](docs/ERDOS_PLAN.md)).
 
@@ -36,7 +36,7 @@ mutation-tested. If something is unknown it is written down as unknown. Full tex
 ## Add a problem
 
 ```
-OWNER=<github-login> tools/new_problem.sh erdos-123
+tools/new_problem.sh erdos-123
 ```
 
 creates `../erdos-123` from [`template/`](template) with the shared docs copied in.

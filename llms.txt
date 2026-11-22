@@ -4,8 +4,8 @@
 
 ## Problem repositories
 
-- [eq-unary-magma-laws](https://github.com/MauroBCardoso/eq-unary-magma-laws): which short laws over one binary and one unary operation imply which (712 laws, all 506,232 ordered pairs accounted for). Has a query tool, `python src/query.py "<law A>" "<law B>"`.
-- [eq-laws-without-small-models](https://github.com/MauroBCardoso/eq-laws-without-small-models): nine laws with no model of size 2 or 3, do they collapse every structure to one element.
+- [eq-unary-magma-laws](https://github.com/Math-Problem-Solving-Using-AI/eq-unary-magma-laws): which short laws over one binary and one unary operation imply which (712 laws, all 506,232 ordered pairs accounted for). Has a query tool, `python src/query.py "<law A>" "<law B>"`.
+- [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): nine laws with no model of size 2 or 3, do they collapse every structure to one element.
 
 ## Shared rules
 
