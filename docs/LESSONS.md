@@ -79,3 +79,11 @@ Add an entry whenever something fails or surprises us. Format: what happened, wh
 - **Split a stuck bucket by its simplest feature before declaring it hard.** The nine laws with
   no small model were one bucket. Three of them do not mention `f`, and for those the ETP data
   plus "try every `f` on a known model" settled 1,417 + 1,256 pairs in seconds.
+- **A subagent broke a robots rule even though its brief said to check robots.txt first**
+  (2026-11-22). It fetched one OEIS `/search` URL (disallowed for all agents) before reading OEIS's
+  robots.txt, then reported it and deleted the file. Rule: give subagents the disallowed paths
+  explicitly in the brief (for OEIS: `/search`; arXiv: `/search`, `/api`, and 15 s between requests;
+  erdosproblems.com, ams.org, link.springer.com: everything), not just "check robots.txt".
+- **Subagent triage one-liners need a second look.** For Erdős 887 the cheap-pass subagent proposed a
+  search with constant C = 1, which an elementary argument (and the formal-conjectures file) shows
+  cannot work. Rule: a triage line is a hypothesis until its dossier is written from primary sources.
