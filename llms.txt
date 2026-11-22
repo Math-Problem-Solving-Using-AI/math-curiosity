@@ -1,6 +1,6 @@
 # math-curiosity
 
-> Hub of open, reproducible experiments on equational laws (and later other open problems), one repository per problem. EARLY and EXPERIMENTAL: nothing is checked in Lean and no result has passed the full verification protocol.
+> Hub of open, reproducible experiments in the style of the Equational Theories Project (which short laws imply which, for structures it did not cover), one repository per problem. EARLY and EXPERIMENTAL: nothing is checked in Lean and no result has passed the full verification protocol.
 
 ## Problem repositories
 
@@ -13,8 +13,7 @@
 - [docs/LEAN_CAVEATS.md](docs/LEAN_CAVEATS.md): why a Lean-accepted proof is not enough, with cited cases
 - [docs/LESSONS.md](docs/LESSONS.md): mistakes and surprises so they are not repeated
 - [docs/LOOPS.md](docs/LOOPS.md): running autonomous sessions
-- [docs/ERDOS_PLAN.md](docs/ERDOS_PLAN.md): plan for erdosproblems.com problems with no prize
-- [docs/erdos/REGISTRY.md](docs/erdos/REGISTRY.md): registered Erdős problems, queue and procedure (none attempted yet). erdosproblems.com disallows Claude agents in robots.txt: do not fetch it
+- [docs/ideas/etp-variants.md](docs/ideas/etp-variants.md): the queue of next ETP-style projects, with a dated triage of what others have done
 
 ## Rules for any LLM or agent using or extending this repository
 

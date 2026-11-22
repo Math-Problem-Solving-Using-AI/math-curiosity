@@ -1,7 +1,7 @@
 # math-curiosity
 
-Open, reproducible experiments on equational laws and, later, other open problems. **One repository
-per problem**, each with granular step records, certificates that anyone can re-check, a status label
+Open, reproducible experiments in the style of the Equational Theories Project (ETP): which short
+laws imply which, for structures the ETP did not cover. **One repository per problem**, each with granular step records, certificates that anyone can re-check, a status label
 on every claim, and CI that re-verifies on every push.
 
 **Early and experimental. No result has passed the full verification protocol, and nothing is checked in
@@ -14,7 +14,18 @@ Lean.** Lean acceptance alone is not treated as proof, see [`docs/LEAN_CAVEATS.m
 | [eq-unary-magma-laws](https://github.com/Math-Problem-Solving-Using-AI/eq-unary-magma-laws) | Which short laws over one binary and one unary operation imply which? | 712 laws up to size 3. 335,885 non-implications certified, 163,054 implications rest on z3 alone, 7,293 pairs open in the stored table (1,256 of them settled by the Equational Theories Project data and 608 more by new certificates, 2026-11-22). The part without `f` agrees with the ETP: 0 disagreements |
 | [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) | Nine of those laws have no model with 2 or 3 elements. Do they collapse every structure to one element? | 2 collapse, 2 known laws (central groupoid, Stein's third law) with fully decided rows, 2 candidate Austin laws (hand arguments), 3 open |
 
-Erdős problems with no prize: triaged and registered for later attempts, none attempted yet ([`docs/erdos/`](docs/erdos), plan in [`docs/ERDOS_PLAN.md`](docs/ERDOS_PLAN.md)).
+## Queue
+
+The next repositories come from [`docs/ideas/etp-variants.md`](docs/ideas/etp-variants.md): 21 ETP-style
+ideas, each checked on 2026-11-22 against the ETP paper, its Zulip channel, arXiv and GitHub. Most are
+done by others or crowded. The ones we found no work on, in order:
+
+1. Laws with a unit element (a constant), a sibling of `eq-unary-magma-laws`
+2. Two binary operations, short laws first
+3. Implications inside commutative-only or idempotent-only magmas
+4. Conditional rules (quasi-identities, cancellativity)
+
+Each one starts with a deeper literature search and the owner's OK.
 
 ## How this is organised
 
@@ -36,10 +47,10 @@ mutation-tested. If something is unknown it is written down as unknown. Full tex
 ## Add a problem
 
 ```
-tools/new_problem.sh erdos-123
+tools/new_problem.sh eq-unit-magma-laws
 ```
 
-creates `../erdos-123` from [`template/`](template) with the shared docs copied in.
+creates `../eq-unit-magma-laws` from [`template/`](template) with the shared docs copied in.
 
 ## Run autonomous sessions
 

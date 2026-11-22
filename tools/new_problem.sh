@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Create a new problem repository next to this hub from template/.
-# Usage: tools/new_problem.sh erdos-123    (OWNER defaults to the organization, override if needed)
+# Usage: tools/new_problem.sh eq-unit-magma-laws    (OWNER defaults to the organization, override if needed)
 set -euo pipefail
 name="$1"
 hub="$(cd "$(dirname "$0")/.." && pwd)"
