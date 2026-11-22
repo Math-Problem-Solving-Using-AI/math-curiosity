@@ -1,0 +1,23 @@
+# {{NAME}}
+
+> One-paragraph summary with the honest status.
+
+## Start here
+
+- [README.md](README.md)
+- [steps/](steps)
+- [docs/shared/VERIFICATION_PROTOCOL.md](docs/shared/VERIFICATION_PROTOCOL.md)
+- [docs/shared/LEAN_CAVEATS.md](docs/shared/LEAN_CAVEATS.md)
+
+## Rules for any LLM or agent using or extending this repository
+
+1. Never state a result with a stronger label than the file gives it. `z3-only` is not proved.
+   Only `lean-checked + fidelity-reviewed + literature-checked` may be called a result, and
+   nothing here has reached that yet.
+2. If you do not know something, say it is unknown. Do not fill gaps from memory. Search
+   summaries and other agents' reports are leads: read the primary page.
+3. A Lean-accepted proof is not sufficient: statement fidelity, junk values, `native_decide`,
+   kernel bugs. See `docs/shared/LEAN_CAVEATS.md`.
+4. Do not claim novelty. No deep literature search has been done.
+5. Autonomous sessions follow `LOOP.md` and keep `STATE.md` current.
+6. Do not publish, push or change license without the owner.
