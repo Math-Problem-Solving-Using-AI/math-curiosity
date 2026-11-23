@@ -19,5 +19,6 @@
 3. A Lean-accepted proof is not sufficient: statement fidelity, junk values, `native_decide`,
    kernel bugs. See `docs/shared/LEAN_CAVEATS.md`.
 4. Do not claim novelty. No deep literature search has been done.
-5. Autonomous sessions follow `LOOP.md` and keep `STATE.md` current.
+5. Autonomous sessions follow `LOOP.md` and keep `STATE.md` current. They stop at the finish
+   line in `LOOP.md` and never take items from "Optional later" in `STATE.md`.
 6. Do not publish, push or change license without the owner.
