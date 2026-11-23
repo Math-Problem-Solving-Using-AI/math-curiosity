@@ -12,20 +12,28 @@ Lean.** Lean acceptance alone is not treated as proof, see [`docs/LEAN_CAVEATS.m
 | Repository | Question | State |
 |------------|----------|-------|
 | [eq-unary-magma-laws](https://github.com/Math-Problem-Solving-Using-AI/eq-unary-magma-laws) | Which short laws over one binary and one unary operation imply which? | 712 laws up to size 3. 335,885 non-implications certified, 163,054 implications rest on z3 alone, 7,293 pairs open in the stored table (1,256 of them settled by the Equational Theories Project data and 608 more by new certificates, 2026-11-22). The part without `f` agrees with the ETP: 0 disagreements |
-| [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) | Nine of those laws have no model with 2 or 3 elements. Do they collapse every structure to one element? | 2 collapse, 2 known laws (central groupoid, Stein's third law) with fully decided rows, 2 candidate Austin laws (hand arguments), 3 open |
+| [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models) | Nine of those laws have no model with 2 or 3 elements. Do they collapse every structure to one element? | **Finished 2026-11-23.** Every law answered with a machine check: 3 collapse, 2 have a 4-element model (known laws: central groupoid, Stein's third law), 4 have an infinite model (`z3-only`; that they have no finite one is a hand argument). Nothing Lean-checked |
 
 ## Queue
 
 The next repositories come from [`docs/ideas/etp-variants.md`](docs/ideas/etp-variants.md): 21 ETP-style
 ideas, each checked on 2026-11-22 against the ETP paper, its Zulip channel, arXiv and GitHub. Most are
-done by others or crowded. The ones we found no work on, in order:
+done by others or crowded. The four we found no work on each have a repository prepared on 2026-11-23,
+not published yet:
 
-1. Laws with a unit element (a constant), a sibling of `eq-unary-magma-laws`
-2. Two binary operations, short laws first
-3. Implications inside commutative-only or idempotent-only magmas
-4. Conditional rules (quasi-identities, cancellativity)
+1. Laws with a unit element (a constant): `eq-unit-magma-laws`
+2. Two binary operations, short laws first: `eq-two-operation-laws`
+3. Implications inside commutative-only or idempotent-only magmas: `eq-commutative-idempotent-magmas`
+4. Conditional rules, starting with cancellativity: `eq-cancellative-magma-laws`
 
-Each one starts with a deeper literature search and the owner's OK.
+Each one starts with its exact statement and a literature check before any computing.
+
+## When a repository is finished
+
+Every repository has a finish line (see [`docs/LOOPS.md`](docs/LOOPS.md)): every case its README asks
+about has an answer, each answer has a machine check, and the answer is explained in plain words.
+Then work stops there. Raising labels (Lean, second provers) and more literature are kept as
+"Optional later" in its `STATE.md`.
 
 ## How this is organised
 
