@@ -5,14 +5,14 @@
 ## Problem repositories
 
 - [eq-unary-magma-laws](https://github.com/Math-Problem-Solving-Using-AI/eq-unary-magma-laws): which short laws over one binary and one unary operation imply which (712 laws, all 506,232 ordered pairs accounted for). Has a query tool, `python src/query.py "<law A>" "<law B>"`.
-- [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): nine laws with no model of size 2 or 3, do they collapse every structure to one element. Two collapse, two are known laws with decided rows, two are candidate Austin laws, three are open.
+- [eq-laws-without-small-models](https://github.com/Math-Problem-Solving-Using-AI/eq-laws-without-small-models): nine laws with no model of size 2 or 3, do they collapse every structure to one element. FINISHED 2026-11-23: 3 collapse, 2 have a 4-element model, 4 have an infinite model (`z3-only`, no finite one by a hand argument). Nothing Lean-checked.
 
 ## Shared rules
 
 - [docs/VERIFICATION_PROTOCOL.md](docs/VERIFICATION_PROTOCOL.md): stages and status labels
 - [docs/LEAN_CAVEATS.md](docs/LEAN_CAVEATS.md): why a Lean-accepted proof is not enough, with cited cases
 - [docs/LESSONS.md](docs/LESSONS.md): mistakes and surprises so they are not repeated
-- [docs/LOOPS.md](docs/LOOPS.md): running autonomous sessions
+- [docs/LOOPS.md](docs/LOOPS.md): running autonomous sessions, and the finish line every repository stops at
 - [docs/ideas/etp-variants.md](docs/ideas/etp-variants.md): the queue of next ETP-style projects, with a dated triage of what others have done
 
 ## Rules for any LLM or agent using or extending this repository

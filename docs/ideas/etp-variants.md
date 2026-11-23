@@ -59,14 +59,19 @@ group, **low** = nothing found (which is not proof that nobody is working on it)
 ## Short list (ranked by fit with what we already built)
 
 1. **#11, laws with a unit constant.** It reuses the `eq-unary-magma-laws` pipeline almost unchanged.
+   Repository prepared 2026-11-23: `eq-unit-magma-laws`.
 2. **#4, two binary operations, starting at order ≤ 2.** Same pipeline, bigger signature.
+   Repository prepared 2026-11-23: `eq-two-operation-laws`.
 3. **#5, commutative-only or idempotent-only magmas.** Can reuse ETP data. Needs a classical literature check first.
+   Repository prepared 2026-11-23: `eq-commutative-idempotent-magmas`.
 4. **#10, quasi-identities and cancellativity.** New kind of statement, so more design work.
+   Repository prepared 2026-11-23: `eq-cancellative-magma-laws` (cancellativity first).
 
 Before any of these starts:
 - a literature search as deep as `eq-unary-magma-laws/docs/PRIOR_WORK.md`, plus GitHub and Zulip
   (the Zulip archive does not cover March to November 2026);
-- an owner decision, one repository per idea.
+- an owner decision, one repository per idea (given 2026-11-23 for all four; the literature search
+  is queue item 2 of each repository).
 
 ## Not done in this triage
 
